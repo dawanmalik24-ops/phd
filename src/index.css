@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+
+  --color-navy: #000080;
+  --color-hot-pink: #C2185B;
+  --color-muted-text: #6B6B80;
+  --color-card-bg: #FFF0F5;
+  --color-border-pink: #FFB6C1;
+
+  --background-image-brand-gradient: linear-gradient(to right, #C2185B, #000080);
+}
+
+@layer base {
+  body {
+    @apply font-sans text-gray-900 bg-white selection:bg-hot-pink/30;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-navy;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-brand-gradient;
+}
+
+.gradient-btn {
+  @apply bg-brand-gradient text-white transition-all duration-300 hover:opacity-90 active:scale-95;
+}
+
+.card-border {
+  @apply border border-border-pink transition-colors duration-300 hover:border-navy;
+}

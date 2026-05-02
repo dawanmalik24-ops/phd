@@ -7,19 +7,19 @@
 
   --color-navy: #000080;
   --color-hot-pink: #C2185B;
-  --color-muted-text: #6B6B80;
-  --color-card-bg: #FFF0F5;
-  --color-border-pink: #FFB6C1;
+  --color-muted-text: #9999aa;
+  --color-card-bg: #111111;
+  --color-border-pink: #3d1526;
 
   --background-image-brand-gradient: linear-gradient(to right, #C2185B, #000080);
 }
 
 @layer base {
   body {
-    @apply font-sans text-gray-900 bg-white selection:bg-hot-pink/30;
+    @apply font-sans text-white bg-black selection:bg-hot-pink/30;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif text-navy;
+    @apply font-serif text-white;
   }
 }
 

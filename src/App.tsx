@@ -35,21 +35,21 @@ const Nav = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md py-4 shadow-sm shadow-black' : 'bg-black/60 backdrop-blur-sm py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <a href="#" className="flex items-center gap-3 group">
-          <span className="font-serif text-xl md:text-2xl font-bold text-navy tracking-tight group-hover:text-hot-pink transition-colors">
-            A PhD, <span className="italic font-normal">But Not A</span> Professor
-          </span>
+        <a href="#" className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-white rounded-full overflow-hidden flex items-center justify-center shrink-0">
+            <img src="https://i.imgur.com/2Sv9wo4.png" alt="A PhD, But Not A Professor Logo" className="w-full h-full object-contain scale-110" referrerPolicy="no-referrer" />
+          </div>
         </a>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href} 
-              className="text-navy font-medium hover:text-hot-pink transition-colors"
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-white font-medium hover:text-hot-pink transition-colors"
             >
               {link.name}
             </a>
@@ -82,7 +82,7 @@ const Nav = () => {
                 key={link.name} 
                 href={link.href} 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-navy text-lg font-medium border-b border-border-pink pb-2"
+                className="text-white text-lg font-medium border-b border-border-pink pb-2"
               >
                 {link.name}
               </a>
@@ -105,21 +105,6 @@ const Hero = () => {
   return (
     <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="mb-10 relative"
-        >
-          <div className="w-40 h-40 md:w-56 md:h-56 bg-white rounded-full flex items-center justify-center shadow-2xl border-4 border-white overflow-hidden">
-            <img 
-              src="https://i.imgur.com/2Sv9wo4.png" 
-              alt="A PhD, But Not A Professor Logo" 
-              className="w-full h-full object-contain mix-blend-multiply scale-110"
-              referrerPolicy="no-referrer"
-            />
-          </div>
-        </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

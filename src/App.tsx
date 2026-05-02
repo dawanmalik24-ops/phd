@@ -35,7 +35,7 @@ const Nav = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md py-4 shadow-sm shadow-black' : 'bg-black/60 backdrop-blur-sm py-6'}`}>
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <a href="#" className="flex items-center gap-3">
           <div className="w-10 h-10 bg-white rounded-full overflow-hidden flex items-center justify-center shrink-0">
@@ -49,7 +49,7 @@ const Nav = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-white font-medium hover:text-hot-pink transition-colors"
+              className="text-navy font-medium hover:text-hot-pink transition-colors"
             >
               {link.name}
             </a>
@@ -82,7 +82,7 @@ const Nav = () => {
                 key={link.name} 
                 href={link.href} 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-white text-lg font-medium border-b border-border-pink pb-2"
+                className="text-navy text-lg font-medium border-b border-border-pink pb-2"
               >
                 {link.name}
               </a>
@@ -103,7 +103,7 @@ const Nav = () => {
 
 const Hero = () => {
   return (
-    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
